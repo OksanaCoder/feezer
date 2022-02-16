@@ -20,7 +20,11 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "base": "src",
+  "paths": {
+    "@components/*": ["components/*"],
+    "@helpers/*" : ["core/helpers/*"],
+    "@services/*" : ["core/services/*"]
+  }
+
 }
