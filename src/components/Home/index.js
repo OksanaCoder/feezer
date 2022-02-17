@@ -5,22 +5,22 @@ import { playlistLoad } from "core/redux/actions/playlist";
 import {useSelector, useDispatch} from 'react-redux'
 
 const Home = () => {
-  const [dataFetched, setData] = useState([]);
 
-  const playlist = useSelector(state => state.playlist)
+  const playlist = useSelector(state => state.playlistReducer.items)
   const dispatch = useDispatch()
 
   useEffect(() => {
     getPlaylists()
       .then((response) => {
-        setData(response.data);
+       const dataFetched = response.data;
+        dispatch(playlistLoad(dataFetched));
       })
-      .then(dispatch(playlistLoad(dataFetched)))
-      .then(console.log(setData, "data"))
       .catch((error) => {
         console.log(error);
       });
+      console.log(playlist, 'playlist')
   }, []);
+
 
   return <>Home</>;
 };
