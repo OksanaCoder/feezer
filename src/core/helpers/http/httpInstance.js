@@ -20,7 +20,7 @@ function handlePreRequest(config) {
 }
 
 export const axiosInstance = axios.create({
-  baseURL: "https://api.deezer.com",
+  baseURL: "",
 });
 
 axiosInstance.interceptors.request.use(handlePreRequest);
