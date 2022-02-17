@@ -1,12 +1,13 @@
 import {actionTypes} from "core/redux/actions/playlist";
 
 const initialState = {
-    items: [], // models.Domain()
+    items: [], 
+    tracks: [],
     loaded: false,
     pending: false,
 };
 
-export default function domainsReducer(
+export default function playlistReducer(
     state = initialState,
     action = {type: null, data: {}}
 ) {
@@ -14,6 +15,11 @@ export default function domainsReducer(
     switch (action.type) {
         case actionTypes.PLAYLIST_LOAD:
             newState.items = action.data.data;
+            newState.loaded = true;
+            newState.pending = false;
+            return newState;
+        case actionTypes.PLAYLIST_TRACKS_LOAD: 
+            newState.tracks = action.data.data;
             newState.loaded = true;
             newState.pending = false;
             return newState;
