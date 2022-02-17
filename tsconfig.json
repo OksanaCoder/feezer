@@ -22,9 +22,9 @@
   },
   "base": "src",
   "paths": {
-    "@components/*": ["components/*"],
-    "@helpers/*" : ["core/helpers/*"],
-    "@services/*" : ["core/services/*"]
+    "@components": ["src/components"],
+    "@helpers" : ["core/helpers"],
+    "@services" : ["core/services"]
   }
 
 }
