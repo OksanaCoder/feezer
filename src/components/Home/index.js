@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPlaylists } from "../../core/services/api/music-api";
+import { getPlaylists } from "core/services/api/music-api";
 
 const Home = () => {
   const [data, setData] = useState([]);

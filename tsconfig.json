@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "es5",
     "lib": [
       "dom",
@@ -21,10 +22,5 @@
     "jsx": "react-jsx"
   },
   "base": "src",
-  "paths": {
-    "@components": ["src/components"],
-    "@helpers" : ["core/helpers"],
-    "@services" : ["core/services"]
-  }
-
+  "include": ["src"]
 }

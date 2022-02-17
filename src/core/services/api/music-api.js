@@ -1,4 +1,4 @@
-import { axiosInstance } from "../../helpers/http/httpInstance";
+import { axiosInstance } from "core/helpers/http/httpInstance";
 
 export const getPlaylists = () => {
   return new Promise(async (resolve, reject) => {
